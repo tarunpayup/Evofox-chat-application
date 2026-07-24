@@ -1,0 +1,32 @@
+Sprint 
+
+Sp1. Splash screen - Saqib
+Sp2. Login screen - Sameer
+Sp3. Signup screen - Sameer
+Sp4. Forget password screen - Saqib
+
+Login -> 
+	1. Username
+	2. Password
+	3. Button
+	4. New to this app -> Create account
+	5. Forget password
+
+Signup ->
+	1. Name
+	2. Username
+	3. Password
+	4. Email
+	5. Phone number
+	6. Button
+	7. Already had an account -> Login now
+
+Forget Password ->
+	1. Toggle button -> Phone or Email
+	2. Text field -> Phone/Email
+	3. Button
+
+Splash Screen ->
+	1. Background image -> Opacity -40% -> Overlay color
+	2. Logo at the center
+	3. Spinner / Loading animation
