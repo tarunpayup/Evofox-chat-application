@@ -5,7 +5,7 @@
 | Property | Value |
 |----------|--------|
 | **API Name** | Forgot Password |
-| **Endpoint** | `/api/forgot_password.php` |
+| **Endpoint** | `agencyanalytics.in/api/forgot_password.php` |
 | **Method** | `POST` |
 | **Authentication** | Not Required |
 | **Content-Type** | `application/json` |

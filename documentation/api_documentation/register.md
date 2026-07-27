@@ -5,7 +5,7 @@
 | Property | Value |
 |----------|--------|
 | **API Name** | User Registration |
-| **Endpoint** | `/api/register.php` |
+| **Endpoint** | `agencyanalytics.in/api/auth/api/register.php` |
 | **Method** | `POST` |
 | **Authentication** | Not Required |
 | **Content-Type** | `application/json` |

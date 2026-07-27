@@ -5,7 +5,7 @@
 | Property | Value |
 |----------|--------|
 | **API Name** | User Login |
-| **Endpoint** | `/api/login.php` |
+| **Endpoint** | `agencyanalytics.in/api/auth/api/login.php` | 
 | **Method** | `POST` |
 | **Authentication** | Not Required |
 | **Content-Type** | `application/json` |

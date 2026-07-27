@@ -5,7 +5,7 @@
 | Property | Value |
 |----------|--------|
 | **API Name** | Resend Email Verification OTP |
-| **Endpoint** | `/api/resend_verification.php` |
+| **Endpoint** | `agencyanalytics.in/api/auth/api/resend_verification.php` |
 | **Method** | `POST` |
 | **Authentication** | Not Required |
 | **Content-Type** | `application/json` |

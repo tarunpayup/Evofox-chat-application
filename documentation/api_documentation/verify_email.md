@@ -5,7 +5,7 @@
 | Property | Value |
 |----------|--------|
 | **API Name** | Verify Email |
-| **Endpoint** | `/api/verify_email.php` |
+| **Endpoint** | `agencyanalytics.in/api/auth/api/verify_email.php` |
 | **Method** | `POST` |
 | **Authentication** | Not Required |
 | **Content-Type** | `application/json` |
