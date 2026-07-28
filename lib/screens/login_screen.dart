@@ -24,7 +24,6 @@ class LoginScreen extends StatelessWidget {
                     Icons.arrow_back,
                     color: Colors.white,
                     size: 25,
-                    fontWeight: FontWeight.bold,
                   ),
                   const SizedBox(height: 20),
                   const Text(
@@ -110,17 +109,17 @@ class LoginScreen extends StatelessWidget {
                         Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => SignupScreen(),
+                            builder: (context) =>const SignupScreen(),
                           ),
                         );
                       },
-                      child: Text(
+                      child: const Text(
                         "Create Account",
                         style: TextStyle(color: Colors.blue),
                       ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   const Align(

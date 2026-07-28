@@ -24,7 +24,6 @@ class SignupScreen extends StatelessWidget {
                     Icons.arrow_back,
                     color: Colors.white,
                     size: 25,
-                    fontWeight: FontWeight.bold,
                   ),
                   const SizedBox(height: 20),
                   const Text(
