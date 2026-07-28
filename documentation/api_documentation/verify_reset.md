@@ -5,7 +5,7 @@
 | Property | Value |
 |----------|--------|
 | **API Name** | Verify Password Reset OTP |
-| **Endpoint** | `agencyanalytics.in/api/auth/api/verify_reset_otp.php` |
+| **Endpoint** | `https://agencyanalytics.in/api/auth/api/verify_reset_otp.php` |
 | **Method** | `POST` |
 | **Authentication** | Not Required |
 | **Content-Type** | `application/json` |

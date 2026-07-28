@@ -5,7 +5,7 @@
 | Property | Value |
 |----------|--------|
 | **API Name** | Reset Password |
-| **Endpoint** | `agencyanalytics.in/api/auth/api/reset_password.php` |
+| **Endpoint** | `https://agencyanalytics.in/api/auth/api/reset_password.php` |
 | **Method** | `POST` |
 | **Authentication** | Not Required |
 | **Content-Type** | `application/json` |
