@@ -62,7 +62,7 @@ Content-Type: application/json
 
 # Success Response
 
-**HTTP Status:** `201 Created`
+**HTTP Status:** `200 Created`
 
 ```json
 {
