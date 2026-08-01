@@ -1,29 +1,69 @@
-import 'package:evofox_chat_app/repository/auth_repository.dart';
-import 'package:evofox_chat_app/screens/login_screen.dart';
-import 'package:evofox_chat_app/screens/signup_Screen.dart';
 import 'package:flutter/material.dart';
+import 'package:evofox_chat_app/screens/new_signup_screen.dart';
 
 void main() {
-    registerUser();
+  runApp(const MyApp());
 }
-final AuthRepository authRepository = AuthRepository();
 
-void registerUser() async{
 
-    var response = await authRepository.register(
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
-      fullName: "Tarun Bansal",
-
-      username: "tarunpayup",
-
-      email: "tarun@gmail.com",
-
-      phone: "9821354741",
-
-      password: "Tb@123456"
-
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Evofox Chat App',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: const SignupScreen(),
     );
+  }
+}
 
-    print(response);
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key, required this.title});
 
+  final String title;
+
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  int _counter = 0;
+
+  void _incrementCounter() {
+    setState(() {
+      _counter++;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(widget.title),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            const Text(
+              'You have pushed the button this many times:',
+            ),
+            Text(
+              '$_counter',
+              style: Theme.of(context).textTheme.headlineMedium,
+            ),
+          ],
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: _incrementCounter,
+        tooltip: 'Increment',
+        child: const Icon(Icons.add),
+      ),
+    );
+  }
 }
