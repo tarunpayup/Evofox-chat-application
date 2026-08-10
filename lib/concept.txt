@@ -1,0 +1,9 @@
+ARCHITECTURE
+SignupScreen (riverpod) -> SignupProvider (State management of Loading/Error/Success state) -> AuthRepository (API Communication -> Http Method = POST) -> register.php (API URL) -> MYSQL Database (Will store data and revert the response to register.php) -> JSON Response (register.php generates the JSON response according to the revert by the mysql) -> AuthRepository -> SignupProvider(Loading will stop + Error/Success) -> SignupScreen
+
+RESONSIBILITIES
+    1. SignupScreen -> UI and User Input
+    2. SignupProvider -> Manage the state of Loading, Sucess & Error.
+    3. AuthRepository -> Will establish the communication between application and API endpoint. Will send data to the API and collect response from it.
+    4. RegisterResponse -> JSON reponse model
+    5. register.php -> API file on server -> Validation (will check whether all values are correct or not -> SQL injection), Handling of Database operations, and Registrations. 
