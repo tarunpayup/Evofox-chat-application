@@ -7,3 +7,11 @@ RESONSIBILITIES
     3. AuthRepository -> Will establish the communication between application and API endpoint. Will send data to the API and collect response from it.
     4. RegisterResponse -> JSON reponse model
     5. register.php -> API file on server -> Validation (will check whether all values are correct or not -> SQL injection), Handling of Database operations, and Registrations. 
+
+
+COMMUNICATION ESTABLISHMENT
+    1. It will send data to the API -> Request (POST)
+    2. It will accepts or recieves the data from API -> Response 
+
+GET URL -> Endpoint -> Data
+POST -> Endpoint & Headers (We send the information about the delivering data) -> Content-type: application/json & Body (JSON){} JSONENCODING
