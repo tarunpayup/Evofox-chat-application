@@ -15,3 +15,18 @@ COMMUNICATION ESTABLISHMENT
 
 GET URL -> Endpoint -> Data
 POST -> Endpoint & Headers (We send the information about the delivering data) -> Content-type: application/json & Body (JSON){} JSONENCODING
+
+
+RIVERPOD
+ARCHITECTURE
+SignupScreen (Watch) <- StateNotifierProvider <- SignupNotifier <- SignupState
+1. SignupNotifier -> StateNotifier -> Class -> Which holds and handles Piece of State & Carries the methods/functions which can change the state.
+SingupNotifier or StateNotifier is responsible for managing the state i.e., SignupState.
+
+SignupNotifierProvider -> It manages both SignupNotifier and SignupState. It essentially tells Riverpod - Here is my SignupNotifier. Manage it and expose its SignupState to the application i.e., SignupScreen.
+
+ref -> It is the reference object of Riverpod. It is the object through which a widget or a provider will communicate with Riverpod.
+ref.Read -> Read the latest state data.
+ref.Watch() -> It will expose the data to the signupscreen.
+
+Salon -> Show - Watch
