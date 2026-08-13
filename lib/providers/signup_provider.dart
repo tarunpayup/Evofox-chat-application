@@ -22,6 +22,7 @@ class SignupState{ //-> State -> Loading (isLoading), Success (response), Error 
 class SignupNotifier extends StateNotifier<SignupState>{
   final AuthRepository repository;
   SignupNotifier(this.repository):super(SignupState());
+  
 
   Future<void> register({
     required String fullName,

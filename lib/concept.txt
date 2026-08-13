@@ -1,7 +1,7 @@
-ARCHITECTURE
+ - ARCHITECTURE
 SignupScreen (riverpod) -> SignupProvider (State management of Loading/Error/Success state) -> AuthRepository (API Communication -> Http Method = POST) -> register.php (API URL) -> MYSQL Database (Will store data and revert the response to register.php) -> JSON Response (register.php generates the JSON response according to the revert by the mysql) -> AuthRepository -> SignupProvider(Loading will stop + Error/Success) -> SignupScreen
 
-RESONSIBILITIES
+- RESONSIBILITIES
     1. SignupScreen -> UI and User Input
     2. SignupProvider -> Manage the state of Loading, Sucess & Error.
     3. AuthRepository -> Will establish the communication between application and API endpoint. Will send data to the API and collect response from it.
@@ -9,15 +9,15 @@ RESONSIBILITIES
     5. register.php -> API file on server -> Validation (will check whether all values are correct or not -> SQL injection), Handling of Database operations, and Registrations. 
 
 
-COMMUNICATION ESTABLISHMENT
+- COMMUNICATION ESTABLISHMENT
     1. It will send data to the API -> Request (POST)
     2. It will accepts or recieves the data from API -> Response 
 
-GET URL -> Endpoint -> Data
-POST -> Endpoint & Headers (We send the information about the delivering data) -> Content-type: application/json & Body (JSON){} JSONENCODING
+- GET URL -> Endpoint -> Data
+- POST -> Endpoint & Headers (We send the information about the delivering data) -> Content-type: application/json & Body (JSON){} JSONENCODING
 
 
-RIVERPOD
+- RIVERPOD
 ARCHITECTURE
 SignupScreen (Watch) <- StateNotifierProvider <- SignupNotifier <- SignupState
 1. SignupNotifier -> StateNotifier -> Class -> Which holds and handles Piece of State & Carries the methods/functions which can change the state.
@@ -30,3 +30,11 @@ ref.Read -> Read the latest state data.
 ref.Watch() -> It will expose the data to the signupscreen.
 
 Salon -> Show - Watch
+
+- RIVERPOD WIDGET
+ConsumerStatefulWidget is a riverpod version of flutter's stateful widget. It is used when a screen needs both Stateful widget and riverpod access (ref.read() - ref.watch()).
+
+
+- dispose()
+dispose() is used to release resources when a flutter widget is removed from the widget tree.
+super.dispose is used so flutter can perform the cleanup required by the parent state class.
