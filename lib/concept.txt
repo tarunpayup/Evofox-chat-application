@@ -26,10 +26,13 @@ SingupNotifier or StateNotifier is responsible for managing the state i.e., Sign
 SignupNotifierProvider -> It manages both SignupNotifier and SignupState. It essentially tells Riverpod - Here is my SignupNotifier. Manage it and expose its SignupState to the application i.e., SignupScreen.
 
 ref -> It is the reference object of Riverpod. It is the object through which a widget or a provider will communicate with Riverpod.
-ref.Read -> Read the latest state data.
-ref.Watch() -> It will expose the data to the signupscreen.
-
+1. ref.Read -> Read the latest state data.
+2. ref.Watch() -> It will expose the data to the signupscreen.
+3. ref.listen() -> Will check What are the changes happens into the state.
 Salon -> Show - Watch
+Open Restraunt -> Waiter ->(No food - Raw material - previous) Chef (Prepared food - next) -> Waiter -> Serve
+Continous monitoring of state -> If-Else -> Condition
+
 
 - RIVERPOD WIDGET
 ConsumerStatefulWidget is a riverpod version of flutter's stateful widget. It is used when a screen needs both Stateful widget and riverpod access (ref.read() - ref.watch()).
@@ -38,3 +41,12 @@ ConsumerStatefulWidget is a riverpod version of flutter's stateful widget. It is
 - dispose()
 dispose() is used to release resources when a flutter widget is removed from the widget tree.
 super.dispose is used so flutter can perform the cleanup required by the parent state class.
+If we cannot dispose, the issue of memory leak will appears. -> App optimization/Perfomance optimization
+Garbage Collector -> 
+dispose -> Identify -> Collect -> Discard from Widget tree -> Garbage collector
+Q - What if we do not dispose?
+If we do not dispose, then the items will remain into widget tree, which consumes unneccessary memory. Hence it creates memory leak which can create a hurdle in app important features.
+
+Signup -> Signup successful -> Success (dispose())-> Dashboard
+
+

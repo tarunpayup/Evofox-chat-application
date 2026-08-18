@@ -57,8 +57,9 @@ class _SignupScreenState
 
   @override
   Widget build(BuildContext context) {
-
+    //River pod system starts from here
     // Listen to Riverpod state
+
     final signupState =
         ref.watch(signupProvider);
 
@@ -69,7 +70,8 @@ class _SignupScreenState
 
     ref.listen<SignupState>(
       signupProvider,
-      (previous, next) {
+      (previous, next) { // What are the changes happens into the state.
+      //Current state is saved or recieved in 'next'.
 
         // SUCCESS
         if (next.response != null) {
@@ -108,7 +110,8 @@ class _SignupScreenState
 
       },
     );
-
+//river pod handling overs here
+//Implementation of riverpod in ui
 
     return Scaffold(
 
